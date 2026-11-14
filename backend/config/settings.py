@@ -57,9 +57,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -86,13 +86,13 @@ else:
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://project-task-pyfullstack-git-main-joel-mathew-ebys-projects.vercel.app",
+    "https://project-task-pyfullstack.vercel.app/",
     "http://localhost:5173",
 
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://project-task-pyfullstack-git-main-joel-mathew-ebys-projects.vercel.app",
+    "https://project-task-pyfullstack.vercel.app/",
 ]
 
 REST_FRAMEWORK={
