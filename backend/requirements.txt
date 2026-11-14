@@ -11,5 +11,4 @@ django-cloudinary-storage==0.3.0
 celery==5.6.0
 redis==7.1.0
 gunicorn==23.0.0
-
-
+whitenoise==6.11.0
