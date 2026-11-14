@@ -86,13 +86,13 @@ else:
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://project-task-pyfullstack.vercel.app/",
+    "https://project-task-pyfullstack.vercel.app",
     "http://localhost:5173",
 
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://project-task-pyfullstack.vercel.app/",
+    "https://project-task-pyfullstack.vercel.app",
 ]
 
 REST_FRAMEWORK={
