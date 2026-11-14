@@ -1,0 +1,143 @@
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: #172033;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  z-index: 1050;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-brand {
+  padding: 10px 15px 25px;
+  border-bottom: 1px solid #334155;
+}
+
+.sidebar-brand h3 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.sidebar-brand small {
+  color: #94a3b8;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 12px;
+}
+
+.sidebar-user small {
+  display: block;
+  color: #94a3b8;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 15px;
+  color: #cbd5e1;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  background: #2563eb;
+  color: white;
+}
+
+.sidebar-logout {
+  background: transparent;
+  color: #fca5a5;
+  border: 0;
+  border-top: 1px solid #334155;
+  padding: 18px 15px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+  }
+}
+
+.main-content {
+  margin-left: 250px;
+  min-height: 100vh;
+  background: #f1f5f9;
+}
+
+.topbar {
+  height: 65px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 25px;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+}
+
+.page-content {
+  padding: 25px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .page-content {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+}
+
+.btn {
+  border-radius: 7px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+h2 {
+  font-weight: 700;
+  color: #172033;
+}
+
+.table {
+  vertical-align: middle;
+}
+
+
+/* LIGHT THEME */
+
+:root,
+[data-theme="light"] {
+  --bg-color: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-color: #1e293b;
+  --muted-color: #64748b;
+  --border-color: #e2e8f0;
+  --input-bg: #ffffff;
+  --sidebar-bg: #172033;
+}
+
+/* DARK THEME */
+
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-color: #f1f5f9;
+  --muted-color: #94a3b8;
+  --border-color: #334155;
+  --input-bg: #334155;
+  --sidebar-bg: #020617;
+}
+
+/* GLOBAL STYLES */
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.2s, color 0.2s;
+}
+
+.main-content {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.topbar {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.card-header {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.form-control,
+.form-select {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.form-control::placeholder {
+  color: var(--muted-color);
+}
+
+.table {
+  --bs-table-bg: var(--card-bg);
+  --bs-table-color: var(--text-color);
+  --bs-table-border-color: var(--border-color);
+}
+
+.text-muted {
+  color: var(--muted-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .alert-light {
+  background: #334155;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+[data-theme="dark"] .btn-close {
+  filter: invert(1);
+}
