@@ -86,19 +86,13 @@ else:
 
 
 CORS_ALLOWED_ORIGINS = [
-    origin.strip()
-    for origin in os.environ.get(
-        "CORS_ALLOWED_ORIGINS", ""
-    ).split(",")
-    if origin.strip()
+    "https://project-task-pyfullstack-git-main-joel-mathew-ebys-projects.vercel.app",
+    "http://localhost:5173",
+
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    origin.strip()
-    for origin in os.environ.get(
-        "CSRF_TRUSTED_ORIGINS", ""
-    ).split(",")
-    if origin.strip()
+    "https://project-task-pyfullstack-git-main-joel-mathew-ebys-projects.vercel.app",
 ]
 
 REST_FRAMEWORK={
